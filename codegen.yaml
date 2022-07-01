@@ -1,0 +1,15 @@
+schema: ${NEXT_PUBLIC_API_URI:http://localhost:3002/graphql}
+documents:
+    - 'api/**/*.graphql'
+generates:
+    api/graphql-operations.ts:
+        hooks:
+            afterOneFileWrite:
+                - prettier --write
+        plugins:
+            - 'typescript'
+            - 'typescript-operations'
+            - 'typed-document-node'
+        config:
+            preResolveTypes: true
+            exportFragmentSpreadSubTypes: true

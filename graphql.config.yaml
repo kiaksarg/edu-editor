@@ -1,0 +1,5 @@
+schema: ${NEXT_PUBLIC_API_URI:http://localhost:3002/graphql}
+documents: 'api/**/*.graphql'
+extensions:
+    customExtension:
+        foo: true

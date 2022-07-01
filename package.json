@@ -1,0 +1,103 @@
+{
+    "name": "Grasp-frontend",
+    "version": "2.0.0",
+    "scripts": {
+        "dev": "next",
+        "dev:debug-2": "NODE_OPTIONS='--inspect' next dev",
+        "dev:debug": "node --inspect ./node_modules/next/dist/bin/next",
+        "build": "next build",
+        "start": "next start",
+        "lint": "eslint --ext ts,tsx .",
+        "lint:fix": "eslint --ext ts,tsx --fix .",
+        "format": "prettier --write . --config ./.prettierrc.json",
+        "stylelint": "stylelint **/*.css",
+        "storybook": "start-storybook",
+        "build:css": "node ./scripts/build-css.js $(pwd)",
+        "test": "jest",
+        "test:watch": "jest --watch",
+        "coverage": "jest --coverage",
+        "codegen": "graphql-codegen --config codegen.yaml"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.{js,ts,tsx}": [
+            "eslint --quiet --fix"
+        ],
+        "*.{json,md,html}": [
+            "prettier --write"
+        ]
+    },
+    "dependencies": {
+        "@chakra-ui/icons": "^1.1.7",
+        "@chakra-ui/react": "^1.8.5",
+        "@emotion/react": "^11",
+        "@emotion/styled": "^11",
+        "@zeit/next-css": "^1.0.1",
+        "cross-env": "^7.0.3",
+        "deepmerge": "^4.2.2",
+        "fbjs": "^3.0.0",
+        "framer-motion": "^6",
+        "lodash": "4.17.20",
+        "markdown-link-extractor": "^1.3.0",
+        "match-sorter": "^6.3.0",
+        "matched": "^5.0.1",
+        "moment": "^2.29.1",
+        "next": "12",
+        "next-images": "^1.8.1",
+        "prop-types": "^15.6.0",
+        "query-string": "^7.0.0",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-icons": "^4.3.1",
+        "react-selectable": "^2.1.1",
+        "react-table": "^7.6.3",
+        "react-use": "^17.3.2",
+        "react-waypoint": "^10.1.0",
+        "rimraf": "^3.0.2",
+        "sass": "^1.35.2",
+        "serialize-query-params": "^1.3.4",
+        "slate": "^0.72.3",
+        "slate-history": "^0.66.0",
+        "slate-hyperscript": "^0.67.0",
+        "slate-react": "^0.72.1",
+        "use-query-params": "^1.2.2"
+    },
+    "license": "MIT",
+    "devDependencies": {
+        "@babel/core": "^7.13.16",
+        "@storybook/react": "^6.2.9",
+        "@types/jest": "^26.0.24",
+        "@types/node": "^14.14.41",
+        "@types/react": "^17.0.3",
+        "@typescript-eslint/eslint-plugin": "^4.22.0",
+        "@typescript-eslint/parser": "^4.22.0",
+        "babel-loader": "^8.2.2",
+        "babel-plugin-module-resolver": "^4.1.0",
+        "enzyme": "^3.11.0",
+        "enzyme-adapter-react-16": "^1.15.6",
+        "enzyme-to-json": "^3.6.2",
+        "eslint": "^7.24.0",
+        "eslint-config-airbnb": "^18.2.1",
+        "eslint-config-airbnb-typescript": "^12.3.1",
+        "eslint-config-prettier": "^8.2.0",
+        "eslint-import-resolver-babel-module": "^5.2.0",
+        "eslint-plugin-flowtype": "^5.7.0",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-jsx-a11y": "^6.4.1",
+        "eslint-plugin-prettier": "^3.4.0",
+        "eslint-plugin-react": "^7.23.2",
+        "eslint-plugin-react-hooks": "^4.2.0",
+        "eslint-plugin-simple-import-sort": "^7.0.0",
+        "husky": "^6.0.0",
+        "identity-obj-proxy": "^3.0.0",
+        "jest": "^27.0.6",
+        "lint-staged": "^10.5.4",
+        "prettier": "^2.2.1",
+        "ts-jest": "^27.0.4",
+        "typescript": "^4.2.4"
+    }
+}
