@@ -18,4 +18,6 @@ const BlockquoteButton = React.forwardRef((props, ref) => (
     />
 ))
 
+BlockquoteButton.displayName = 'BlockquoteButton'
+
 export default BlockquoteButton

@@ -2,7 +2,6 @@ import { FC, useEffect, useState } from 'react'
 import { GraspEditable, GraspSlate, HoveringToolbar } from '../Slate'
 import SlateCommand from '../Slate/components/Command/SlateCommand'
 import MenuHandler from '../Slate/components/MenuHandler/MenuHandler'
-import LearningProcessesToolbar from '../Slate/components/Toolbars/LearningProcessesToolbar'
 
 interface MainEditorProps {
     editorKey

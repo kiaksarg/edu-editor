@@ -17,4 +17,7 @@ const BulletedListButton = React.forwardRef((props, ref) => (
         {...props}
     />
 ))
+
+BulletedListButton.displayName = 'BulletedListButton'
+
 export default BulletedListButton

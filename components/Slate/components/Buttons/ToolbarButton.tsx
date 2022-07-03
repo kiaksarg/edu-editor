@@ -6,9 +6,6 @@ import { Editor } from 'slate'
 import { HistoryEditor } from 'slate-history'
 import { MdCropSquare } from 'react-icons/md'
 import { FC } from 'react'
-import { SlateGraspEditor } from '../../slateTypes'
-
-type EditorProps = Editor | ReactEditor | HistoryEditor
 
 /**
  * ToolbarButton is the base button for any button on the toolbars.
@@ -33,7 +30,7 @@ const ToolbarButton: FC<any> = React.forwardRef(
         },
         ref
     ) => {
-        const editor: SlateGraspEditor = useSlate()
+        const editor = useSlate()
 
         /**
          * If no tooltip prop is passed it generates a default based on the format string.
@@ -115,6 +112,8 @@ const ToolbarButton: FC<any> = React.forwardRef(
         )
     }
 )
+
+ToolbarButton.displayName = 'ToolbarButton'
 
 export default ToolbarButton
 

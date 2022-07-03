@@ -41,6 +41,7 @@ export interface SlateGraspEditorBase extends ReactEditor {
     commands: any[]
     selectedCommand: number
     //With Mark
+    isMarkActive: (mark: string) => boolean
     toggleMark: (mark: string) => CustomEditor
     //With links
     isInline: (element: Element) => boolean

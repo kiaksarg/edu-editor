@@ -21,4 +21,7 @@ const HeadingButtons = React.forwardRef((props, ref) => (
         />
     </>
 ))
+
+HeadingButtons.displayName = 'HeadingButtons'
+
 export default HeadingButtons

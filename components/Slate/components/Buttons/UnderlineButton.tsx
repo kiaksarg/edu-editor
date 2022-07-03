@@ -16,4 +16,7 @@ const UnderlineButton = React.forwardRef((props, ref) => (
         {...props}
     />
 ))
+
+UnderlineButton.displayName = 'UnderlineButton'
+
 export default UnderlineButton

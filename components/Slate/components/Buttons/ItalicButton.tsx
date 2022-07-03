@@ -11,4 +11,7 @@ import ToolbarButton from './ToolbarButton'
 const ItalicButton = React.forwardRef((props, ref) => (
     <ToolbarButton icon={<MdFormatItalic />} type="mark" format="italic" ref={ref} {...props} />
 ))
+
+ItalicButton.displayName = 'ItalicButton'
+
 export default ItalicButton

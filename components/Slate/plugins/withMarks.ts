@@ -11,7 +11,7 @@ const withMarks = (editor) => {
      *
      * @param {String} mark Mark to validate For example: 'bold', 'italic'
      */
-    editor.isMarkActive = (mark) => {
+    editor.isMarkActive = (mark): boolean => {
         const marks = GraspEditor.marks(editor)
         return marks ? marks[mark] === true : false
     }

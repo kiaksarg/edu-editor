@@ -11,4 +11,7 @@ import ToolbarButton from './ToolbarButton'
 const BoldButton = React.forwardRef((props, ref) => (
     <ToolbarButton icon={<MdFormatBold />} type="mark" format="bold" ref={ref} {...props} />
 ))
+
+BoldButton.displayName = 'BoldButton'
+
 export default BoldButton

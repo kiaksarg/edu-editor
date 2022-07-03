@@ -17,4 +17,7 @@ const NumberedListButton = React.forwardRef((props, ref) => (
         {...props}
     />
 ))
+
+NumberedListButton.displayName = 'NumberedListButton'
+
 export default NumberedListButton
