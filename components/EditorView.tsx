@@ -221,18 +221,20 @@ const EditorView: FC = () => {
 
     const [isReadOnly, setIsReadOnly] = useState(false)
 
-    const [value, setValue] = useState<Descendant[]>([])
+    const [value, setValue] = useState<Descendant[]>(
+        typeof window === 'undefined'
+            ? []
+            : JSON.parse(localStorage.getItem('slate-content')) ?? initialValue()
+    )
 
-    useEffect(() => {
-        const localStorageContent = localStorage.getItem('slate-content')
-        if (localStorageContent) {
-            const parsedContent = JSON.parse(localStorageContent)
-            console.log(localStorageContent)
-            console.log(parsedContent)
+    // useEffect(() => {
+    //     const localStorageContent = localStorage.getItem('slate-content')
+    //     if (localStorageContent) {
+    //         const parsedContent = JSON.parse(localStorageContent)
 
-            setValue(parsedContent ?? initialValue())
-        } else setValue(initialValue())
-    }, [])
+    //         setValue(parsedContent ?? initialValue())
+    //     } else setValue(initialValue())
+    // }, [])
 
     const conceptWindowPositionsRef = useRef({
         x: 775,
@@ -240,7 +242,7 @@ const EditorView: FC = () => {
     })
 
     // An instance of material editor. It is an slate editor with a few more functions
-    if (!mainEditorRef.current) mainEditorRef.current = createGraspEditor('mainCourseEditor')
+    if (!mainEditorRef.current) mainEditorRef.current = createGraspEditor('mainEditor')
     const editor = mainEditorRef.current
 
     // const [saveBlocks, { data, loading, error }] = useMutation(SAVE_BLOCKS)
