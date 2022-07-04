@@ -24,7 +24,7 @@ const Portal = ({ children }) => {
     return ReactDOM.createPortal(children, document.body)
 }
 
-const editorId = 'mainCourseEditor'
+const editorId = 'mainEditor'
 const editorName = 'main'
 /**
  * A hovering toolbar that is, a toolbar that appears over a selected text, and only when there is
