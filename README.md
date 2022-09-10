@@ -5,7 +5,10 @@
 Demo:  [edu-editor.netlify.app](https://edu-editor.netlify.app/)
 
 ___
-![Edu-Editor](https://user-images.githubusercontent.com/13861835/176963234-ab289945-eab3-4164-9b44-b461038a0255.gif)
+
+
+https://user-images.githubusercontent.com/13861835/189480364-06b6174a-ecf0-4f4e-8e03-3c75e821f89d.mp4
+
 
 ## Basic Features
 - blocks
